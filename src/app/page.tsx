@@ -1,5 +1,10 @@
-import dark from '@/shared/styles/themes/dark';
+import { Button } from '@/shared/components/Button';
+import theme from '@/shared/styles/themes/theme';
 
 export default function Home() {
-  return <h1 style={{ color: dark.colors.primary }}>sasdc</h1>;
+  return (
+    <div style={{ height: '2000px' }}>
+      <Button />
+    </div>
+  );
 }

@@ -7,7 +7,7 @@ import {
   StyleSheetManager,
   ThemeProvider,
 } from 'styled-components';
-import dark from '@/shared/styles/themes/dark';
+import dark from '@/shared/styles/themes/theme';
 import GlobalStyles from '@/shared/styles/globals.styles';
 
 export default function StyledComponentsRegistry({
