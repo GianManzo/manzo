@@ -1,4 +1,4 @@
-import { poppins } from './fonts';
+import { poppins, roboto } from './fonts';
 import { ITheme } from './theme.interfaces';
 
 // styles/theme.js
@@ -29,6 +29,7 @@ const theme: ITheme = {
 
   fontFamily: {
     poppins: poppins.className,
+    roboto: roboto.className,
   },
 
   fontWeight: {
@@ -36,5 +37,4 @@ const theme: ITheme = {
     bold: '700',
   },
 };
-
 export default theme;

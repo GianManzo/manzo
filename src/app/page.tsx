@@ -1,10 +1,15 @@
-import { Button } from '@/shared/components/Button';
-import theme from '@/shared/styles/themes/theme';
+import { Button, Icon } from '@/shared/components';
 
 export default function Home() {
   return (
     <div style={{ height: '2000px' }}>
-      <Button />
+      <Button
+        size="large"
+        endIcon={<Icon iconName="gitLogo" />}
+        variant="outlined"
+      >
+        Repo
+      </Button>
     </div>
   );
 }

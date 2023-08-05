@@ -1,5 +1,5 @@
 import { poppins, roboto } from '@/shared/styles/themes/fonts';
-import StyledComponentsRegistry from './lib/registry';
+import ThemeProvider from './lib/registry';
 
 export default function RootLayout({
   children,
@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${roboto.variable} `}>
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

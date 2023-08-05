@@ -38,4 +38,5 @@ export interface IShadows {
 
 export interface IFont {
   poppins: string;
+  roboto: string;
 }

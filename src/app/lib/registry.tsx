@@ -2,15 +2,21 @@
 
 import React, { useState } from 'react';
 import { useServerInsertedHTML } from 'next/navigation';
+
 import {
   ServerStyleSheet,
   StyleSheetManager,
-  ThemeProvider,
+  ThemeProvider as ThemeProviderSC,
 } from 'styled-components';
-import dark from '@/shared/styles/themes/theme';
-import GlobalStyles from '@/shared/styles/globals.styles';
+import {
+  ThemeProvider as MaterialThemeProvider,
+  createTheme,
+} from '@mui/material/styles';
 
-export default function StyledComponentsRegistry({
+import GlobalStyles from '@/shared/styles/globals.styles';
+import theme from '@/shared/styles/themes/theme';
+
+export default function ThemeProvider({
   children,
 }: {
   children: React.ReactNode;
@@ -27,12 +33,30 @@ export default function StyledComponentsRegistry({
 
   if (typeof window !== 'undefined') return <>{children}</>;
 
+  const materialTheme = createTheme({
+    palette: {
+      primary: {
+        main: theme.colors.primary,
+      },
+      secondary: {
+        main: theme.colors.backgroundPrimary,
+      },
+    },
+    typography: {
+      button: {
+        textTransform: 'none',
+      },
+    },
+  });
+
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-      <ThemeProvider theme={dark}>
-        <GlobalStyles />
-        {children}
-      </ThemeProvider>
+      <ThemeProviderSC theme={theme}>
+        <MaterialThemeProvider theme={materialTheme}>
+          {children}
+          <GlobalStyles />
+        </MaterialThemeProvider>
+      </ThemeProviderSC>
     </StyleSheetManager>
   );
 }
