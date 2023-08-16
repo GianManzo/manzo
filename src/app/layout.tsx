@@ -1,6 +1,6 @@
 import { poppins, roboto } from '@/shared/styles/themes/fonts';
-import ThemeProvider from './lib/registry';
-
+import Contexts from '../shared/contexts/context';
+import { TranslationProvider } from '@/shared/contexts/i18n/translation.context';
 export default function RootLayout({
   children,
 }: {
@@ -9,7 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${roboto.variable} `}>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <TranslationProvider>
+          <Contexts>{children}</Contexts>
+        </TranslationProvider>
       </body>
     </html>
   );

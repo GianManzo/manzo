@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useServerInsertedHTML } from 'next/navigation';
+import '@/shared/lib/i18n';
 
 import {
   ServerStyleSheet,
@@ -16,11 +17,7 @@ import {
 import GlobalStyles from '@/shared/styles/globals.styles';
 import theme from '@/shared/styles/themes/theme';
 
-export default function ThemeProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Contexts({ children }: { children: React.ReactNode }) {
   // Only create stylesheet once with lazy initial state
   // x-ref: https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
   const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
