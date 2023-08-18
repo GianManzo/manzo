@@ -1,7 +1,8 @@
 'use client';
 import {
   LanguagesType,
-  TranslateFunction,
+  TranslationContextData,
+  TranslationProviderProps,
 } from '@/shared/translations/translations.interfaces';
 import PropTypes from 'prop-types';
 import React, {
@@ -11,16 +12,6 @@ import React, {
   useEffect,
 } from 'react';
 import { useTranslation as i18nUseTranslation } from 'react-i18next';
-
-interface TranslationContextData {
-  language: LanguagesType;
-  translate: TranslateFunction;
-  changeLanguage: (languageCode: LanguagesType) => void;
-}
-
-interface TranslationProviderProps {
-  children: React.ReactNode;
-}
 
 const TranslationContext = createContext({} as TranslationContextData);
 
@@ -40,7 +31,7 @@ const TranslationProvider: React.FC<TranslationProviderProps> = ({
   );
 
   const changeLanguage = useCallback(
-    (code: LanguagesType) => {
+    (code: string) => {
       i18n.changeLanguage(code);
     },
     [i18n],
@@ -53,10 +44,6 @@ const TranslationProvider: React.FC<TranslationProviderProps> = ({
       {children}
     </TranslationContext.Provider>
   );
-};
-
-TranslationProvider.propTypes = {
-  children: PropTypes.element.isRequired,
 };
 
 function useTranslation() {
