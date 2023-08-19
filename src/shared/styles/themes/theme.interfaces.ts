@@ -1,9 +1,21 @@
+export type IGrey = {
+  full: string;
+  '400': string;
+  '600': string;
+  '800': string;
+  '900': string;
+};
 export interface ITheme {
   colors: IColors;
   shadows: IShadows;
   fontSizes: IFontSize;
   fontFamily: IFont;
   fontWeight: IFontWeight;
+  background: IBackground;
+}
+
+export interface IBackground {
+  primary: string;
 }
 
 export interface IFontWeight {
@@ -13,14 +25,10 @@ export interface IFontWeight {
 
 export interface IColors {
   primary: string;
+  secondary: string;
   fullColor: string;
-  strong: string;
-  normal: string;
-  opaque: string;
-  smoked: string;
-  almostSmoked: string;
   text: string;
-  backgroundPrimary: string;
+  grey: IGrey;
 }
 
 export interface IFontSize {

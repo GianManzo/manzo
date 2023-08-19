@@ -1,22 +1,24 @@
+import { deepPurple } from '@mui/material/colors';
 import { poppins, roboto } from './fonts';
 import { ITheme } from './theme.interfaces';
 
-// styles/theme.js
 const theme: ITheme = {
   colors: {
-    primary: '#9765e9',
-    backgroundPrimary: '#511ca6',
+    primary: deepPurple[500],
+    secondary: '#89b73a',
     fullColor: '#000000',
-    strong: '#000',
-    normal: '#000000CC',
-    opaque: '#00000080',
-    smoked: '#0000004D',
-    almostSmoked: '#00000020',
     text: '#fff',
+    grey: {
+      '400': '#343333',
+      '600': '#2F2D2D',
+      '800': '#272626',
+      '900': '#201F1F',
+      full: '#151515',
+    },
   },
   shadows: {
-    full: 'rgba(0, 0, 0, 0.512)',
-    primary: 'hsl(263,59%,35%)',
+    full: '#1E1E1E',
+    primary: '#311b92',
   },
 
   fontSizes: {
@@ -35,6 +37,10 @@ const theme: ITheme = {
   fontWeight: {
     regular: '400',
     bold: '700',
+  },
+
+  background: {
+    primary: '#151515',
   },
 };
 export default theme;

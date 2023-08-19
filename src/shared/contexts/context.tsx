@@ -2,20 +2,18 @@
 
 import React, { useState } from 'react';
 import { useServerInsertedHTML } from 'next/navigation';
-import '@/shared/lib/i18n';
+import '@/shared/lib/i18n.config';
 
 import {
   ServerStyleSheet,
   StyleSheetManager,
   ThemeProvider as ThemeProviderSC,
 } from 'styled-components';
-import {
-  ThemeProvider as MaterialThemeProvider,
-  createTheme,
-} from '@mui/material/styles';
+import { ThemeProvider as MaterialThemeProvider } from '@mui/material/styles';
 
 import GlobalStyles from '@/shared/styles/globals.styles';
 import theme from '@/shared/styles/themes/theme';
+import { materialTheme } from '../styles';
 
 export default function Contexts({ children }: { children: React.ReactNode }) {
   // Only create stylesheet once with lazy initial state
@@ -29,22 +27,6 @@ export default function Contexts({ children }: { children: React.ReactNode }) {
   });
 
   if (typeof window !== 'undefined') return <>{children}</>;
-
-  const materialTheme = createTheme({
-    palette: {
-      primary: {
-        main: theme.colors.primary,
-      },
-      secondary: {
-        main: theme.colors.backgroundPrimary,
-      },
-    },
-    typography: {
-      button: {
-        textTransform: 'none',
-      },
-    },
-  });
 
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>

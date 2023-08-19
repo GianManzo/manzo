@@ -2,7 +2,7 @@
 
 import { useTranslation } from '@/shared/contexts/i18n/translation.context';
 import { useEffect, useState } from 'react';
-import { Button } from '..';
+import { Button } from '../..';
 
 export const LanguageSelector = () => {
   const { changeLanguage, language, translate } = useTranslation();

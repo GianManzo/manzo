@@ -1,7 +1,7 @@
 import { poppins, roboto } from '@/shared/styles/themes/fonts';
 import Contexts from '../shared/contexts/context';
 import { TranslationProvider } from '@/shared/contexts/i18n/translation.context';
-import { LanguageSelector } from '@/shared/components/ChangeLanguage/ChangeLanguage';
+
 export default function RootLayout({
   children,
 }: {
@@ -11,10 +11,7 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} ${roboto.variable} `}>
       <body>
         <Contexts>
-          <TranslationProvider>
-            <LanguageSelector />
-            {children}
-          </TranslationProvider>
+          <TranslationProvider>{children}</TranslationProvider>
         </Contexts>
       </body>
     </html>

@@ -14,7 +14,6 @@ const GlobalStyles = createGlobalStyle`
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  /* background-color: rgba(255, 255, 255, 0); */
   backdrop-filter: blur(120px);
   -webkit-backdrop-filter: blur(120px);
 }
@@ -30,7 +29,8 @@ const GlobalStyles = createGlobalStyle`
 
 body {
     -webkit-font-smoothing: "antialiassed";
-    background: ${props => props.theme.colors.fullColor};
+    background: ${props => props.theme.background.primary};
+    color:${props => props.theme.colors.text};
 };
 
 `;

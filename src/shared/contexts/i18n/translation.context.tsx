@@ -1,10 +1,11 @@
 'use client';
+
+import { DefaultTemplate } from '@/shared/components';
 import {
   LanguagesType,
   TranslationContextData,
   TranslationProviderProps,
 } from '@/shared/translations/translations.interfaces';
-import PropTypes from 'prop-types';
 import React, {
   createContext,
   useCallback,
@@ -41,7 +42,7 @@ const TranslationProvider: React.FC<TranslationProviderProps> = ({
     <TranslationContext.Provider
       value={{ translate, changeLanguage, language }}
     >
-      {children}
+      <DefaultTemplate>{children}</DefaultTemplate>
     </TranslationContext.Provider>
   );
 };
