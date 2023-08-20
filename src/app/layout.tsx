@@ -1,6 +1,7 @@
 import { poppins, roboto } from '@/shared/styles/themes/fonts';
 import Contexts from '../shared/contexts/context';
 import { TranslationProvider } from '@/shared/contexts/i18n/translation.context';
+import '/node_modules/flag-icons/css/flag-icons.min.css';
 
 export default function RootLayout({
   children,

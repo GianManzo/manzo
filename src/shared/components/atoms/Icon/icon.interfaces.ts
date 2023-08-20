@@ -9,5 +9,6 @@ export interface IconProps {
 
 export const iconTypes = {
   GIT: 'gitLogo',
+  ARROW_DOWN: 'arrowDown',
 };
-export type IconNames = 'gitLogo';
+export type IconNames = 'gitLogo' | 'arrowDown';

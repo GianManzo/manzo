@@ -1,6 +1,11 @@
 {
   "translation": {
     "header": "oii",
-    "teste": "quero entender"
+    "teste": "quero entender",
+    "languages": {
+      "br": "Português",
+      "us": "Inglês",
+      "es": "Espanhol"
+    }
   }
 }

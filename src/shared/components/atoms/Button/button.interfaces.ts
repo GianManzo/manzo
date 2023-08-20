@@ -1,7 +1,7 @@
 import { ButtonProps } from '@mui/material';
 
 export interface IButton extends ButtonProps {
-  children: string;
+  children: any;
   textColor?: string;
 }
 

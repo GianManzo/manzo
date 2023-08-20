@@ -1,6 +1,11 @@
 {
   "translation": {
     "header": "hello",
-    "teste": "not extended"
+    "teste": "not extended",
+    "languages": {
+      "br": "Portuguese",
+      "us": "English",
+      "es": "Spanish"
+    }
   }
 }

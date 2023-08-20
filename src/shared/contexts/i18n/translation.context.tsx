@@ -11,6 +11,7 @@ import React, {
   useCallback,
   useContext,
   useEffect,
+  useState,
 } from 'react';
 import { useTranslation as i18nUseTranslation } from 'react-i18next';
 
@@ -20,10 +21,13 @@ const TranslationProvider: React.FC<TranslationProviderProps> = ({
   children,
 }: TranslationProviderProps) => {
   const { t, i18n } = i18nUseTranslation();
-  const [language, setLanguage] = React.useState<LanguagesType>('pt');
+  const [language, setLanguage] = useState<LanguagesType>('pt');
+  //created state loading to render the component only when the language is loaded
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLanguage(i18n.language as LanguagesType);
+    setLoading(false);
   }, [i18n]);
 
   const translate = useCallback(
@@ -39,11 +43,15 @@ const TranslationProvider: React.FC<TranslationProviderProps> = ({
   );
 
   return (
-    <TranslationContext.Provider
-      value={{ translate, changeLanguage, language }}
-    >
-      <DefaultTemplate>{children}</DefaultTemplate>
-    </TranslationContext.Provider>
+    <>
+      {!loading && (
+        <TranslationContext.Provider
+          value={{ translate, changeLanguage, language }}
+        >
+          <DefaultTemplate>{children}</DefaultTemplate>
+        </TranslationContext.Provider>
+      )}
+    </>
   );
 };
 
