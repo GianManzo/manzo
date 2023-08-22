@@ -22,7 +22,6 @@ const TranslationProvider: React.FC<TranslationProviderProps> = ({
 }: TranslationProviderProps) => {
   const { t, i18n } = i18nUseTranslation();
   const [language, setLanguage] = useState<LanguagesType>('pt');
-  //created state loading to render the component only when the language is loaded
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

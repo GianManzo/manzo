@@ -3,16 +3,7 @@
 import { useTranslation } from '@/shared/contexts/i18n/translation.context';
 import { useEffect, useState } from 'react';
 import { Button, Icon } from '../..';
-import {
-  Box,
-  IconButton,
-  Menu,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-  Tooltip,
-  Typography,
-} from '@mui/material';
+import { Box, Menu, Tooltip, Typography } from '@mui/material';
 import { CountryButton, LanguageButton } from './languageSelector.styles';
 import { CountryIcon } from '../../atoms/CountryIcon';
 import { ISO_COUNTRY_CODES } from '@/shared/translations/constants';
