@@ -24,6 +24,7 @@ export interface IFontWeight {
 }
 
 export interface IColors {
+  hover: string;
   primary: string;
   secondary: string;
   fullColor: string;

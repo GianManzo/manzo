@@ -3,10 +3,16 @@
 import { useTranslation } from '@/shared/contexts/i18n/translation.context';
 import { useEffect, useState } from 'react';
 import { Button, Icon } from '../..';
-import { Box, Menu, Tooltip, Typography } from '@mui/material';
-import { CountryButton, LanguageButton } from './languageSelector.styles';
+import { Box, Tooltip, Typography } from '@mui/material';
+import {
+  CountryButton,
+  LanguageButton,
+  MenuCountry,
+} from './languageSelector.styles';
 import { CountryIcon } from '../../atoms/CountryIcon';
 import { ISO_COUNTRY_CODES } from '@/shared/translations/constants';
+import theme from '@/shared/styles/themes/theme';
+import { HoverWrapper } from '../../atoms/HoverWrapper';
 
 export const LanguageSelector = () => {
   const { changeLanguage, language, translate } = useTranslation();
@@ -88,7 +94,7 @@ export const LanguageSelector = () => {
             </Button>
           </Tooltip>
 
-          <Menu
+          <MenuCountry
             sx={{ mt: '10px' }}
             anchorEl={anchorElUser}
             anchorOrigin={{
@@ -113,22 +119,33 @@ export const LanguageSelector = () => {
                   flag && (
                     <>
                       <Box position="relative" key={flag.id}>
-                        <LanguageButton
+                        <HoverWrapper
+                          borderRadius={8}
                           onClick={() => handleLanguageChange(flag.countryCode)}
+                          variant="background"
+                          key={flag.id}
+                          style={{
+                            padding: 8,
+                          }}
                         >
-                          <Box className="language-button-left">
-                            <CountryIcon countryCode={flag.countryCode} />
-                            <Typography style={{ marginLeft: 8 }}>
-                              {translate(`languages.${flag.countryCode}`)}
-                            </Typography>
-                          </Box>
-                        </LanguageButton>
+                          <LanguageButton>
+                            <Box className="language-button-left">
+                              <CountryIcon countryCode={flag.countryCode} />
+                              <Typography
+                                color={theme.colors.text}
+                                style={{ marginLeft: 8 }}
+                              >
+                                {translate(`languages.${flag.countryCode}`)}
+                              </Typography>
+                            </Box>
+                          </LanguageButton>
+                        </HoverWrapper>
                       </Box>
                     </>
                   ),
               )}
             </Box>
-          </Menu>
+          </MenuCountry>
         </Box>
       </div>
     </>

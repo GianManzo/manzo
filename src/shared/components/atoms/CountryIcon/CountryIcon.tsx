@@ -1,12 +1,6 @@
-import React from 'react';
-
 import { ICountryIconProps } from './countryIcon.interfaces';
 import { Span } from './countryIcon.styles';
 
-/** CountryIcon use <b>flag-icon-css lib</b> to render the country flags.
- *
- * Click <a href="https://github.com/lipis/flag-icon-css">here</a> to see all documentation
- */
 const CountryIcon = ({
   countryCode = 'br',
   size = 18,

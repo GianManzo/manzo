@@ -1,3 +1,4 @@
+import { Box, Menu } from '@mui/material';
 import styled from 'styled-components';
 
 export const LanguageButton = styled.div`
@@ -17,4 +18,10 @@ export const CountryButton = styled.div`
   display: flex !important;
   align-items: center;
   gap: 0.5rem;
+`;
+
+export const MenuCountry = styled(Menu)`
+  .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-color: #393838;
+  }
 `;

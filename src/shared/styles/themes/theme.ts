@@ -8,6 +8,7 @@ const theme: ITheme = {
     secondary: '#89b73a',
     fullColor: '#000000',
     text: '#fff',
+    hover: '#18181d',
     grey: {
       '400': '#343333',
       '600': '#2F2D2D',
