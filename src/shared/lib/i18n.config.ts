@@ -9,14 +9,20 @@ import es from '@/shared/translations/es.json';
 i18n.use(initReactI18next).init({
   resources: {
     en: {
-      ...en,
+      translation: {
+        ...en,
+      },
     },
 
     pt: {
-      ...pt,
+      translation: {
+        ...pt,
+      },
     },
     es: {
-      ...es,
+      translation: {
+        ...es,
+      },
     },
   },
   lng: 'pt',

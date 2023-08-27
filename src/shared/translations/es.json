@@ -1,10 +1,14 @@
 {
-  "translation": {
-    "header": "ola que tal",
-    "languages": {
-      "br": "Portugués",
-      "us": "Inglés",
-      "es": "Español"
-    }
+  "languages": {
+    "br": "Portugués",
+    "us": "Inglés",
+    "es": "Español"
+  },
+
+  "headerMenu": {
+    "home": "Comenzar",
+    "resume": "Acerca de",
+    "projects": "Proyectos",
+    "experiences": "Experiencias"
   }
 }

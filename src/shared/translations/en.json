@@ -1,11 +1,13 @@
 {
-  "translation": {
-    "header": "hello",
-    "teste": "not extended",
-    "languages": {
-      "br": "Portuguese",
-      "us": "English",
-      "es": "Spanish"
-    }
+  "languages": {
+    "br": "Portuguese",
+    "us": "English",
+    "es": "Spanish"
+  },
+  "headerMenu": {
+    "home": "Home",
+    "resume": "Resume",
+    "projects": "Projects",
+    "experiences": "Experience"
   }
 }

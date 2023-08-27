@@ -18,7 +18,7 @@ const theme: ITheme = {
     },
   },
   shadows: {
-    full: '#1E1E1E',
+    full: 'rgba(0, 0, 0, 0.2)',
     primary: '#311b92',
   },
 
@@ -42,6 +42,7 @@ const theme: ITheme = {
 
   background: {
     primary: '#151515',
+    secondary: 'rgba(57, 56, 56, 0.2)',
   },
 };
 export default theme;

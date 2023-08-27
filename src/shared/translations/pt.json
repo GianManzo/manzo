@@ -1,11 +1,14 @@
 {
-  "translation": {
-    "header": "oii",
-    "teste": "quero entender",
-    "languages": {
-      "br": "Português",
-      "us": "Inglês",
-      "es": "Espanhol"
-    }
+  "languages": {
+    "br": "Português",
+    "us": "Inglês",
+    "es": "Espanhol"
+  },
+
+  "headerMenu": {
+    "home": "Inicio",
+    "resume": "Sobre",
+    "projects": "Projetos",
+    "experiences": "Experiências"
   }
 }

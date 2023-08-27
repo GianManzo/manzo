@@ -1,4 +1,5 @@
-import { LanguageSelector } from '../..';
+import { HeaderMenu } from '@/modules';
+import { DefaultTemplateContainer } from './defaultTemplate.styles';
 
 export const DefaultTemplate = ({
   children,
@@ -6,9 +7,9 @@ export const DefaultTemplate = ({
   children: React.ReactNode;
 }) => {
   return (
-    <>
-      <LanguageSelector />
+    <DefaultTemplateContainer>
+      <HeaderMenu />
       {children}
-    </>
+    </DefaultTemplateContainer>
   );
 };

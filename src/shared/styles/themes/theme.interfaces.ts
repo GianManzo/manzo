@@ -1,10 +1,3 @@
-export type IGrey = {
-  full: string;
-  '400': string;
-  '600': string;
-  '800': string;
-  '900': string;
-};
 export interface ITheme {
   colors: IColors;
   shadows: IShadows;
@@ -13,9 +6,17 @@ export interface ITheme {
   fontWeight: IFontWeight;
   background: IBackground;
 }
+export type IGrey = {
+  full: string;
+  '400': string;
+  '600': string;
+  '800': string;
+  '900': string;
+};
 
 export interface IBackground {
   primary: string;
+  secondary: string;
 }
 
 export interface IFontWeight {
