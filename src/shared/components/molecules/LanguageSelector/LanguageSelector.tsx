@@ -12,7 +12,6 @@ import { LanguageItem } from '../components/LanguageItem/LanguageItem';
 export const LanguageSelector = () => {
   const {
     handleLanguageChange,
-    translate,
     getLanguageUser,
     handleOpenUserMenu,
     handleCloseUserMenu,
@@ -63,6 +62,7 @@ export const LanguageSelector = () => {
             maxWidth="250px"
           >
             <LanguageItem
+              currentFlag={currentFlag}
               handleLanguageChange={handleLanguageChange}
               languages={languages}
             />

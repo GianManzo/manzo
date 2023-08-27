@@ -1,14 +1,14 @@
 import { HoverWrapperProps } from './hoverWrapper.interfaces';
 import { Container } from './hoverWrapper.styles';
 
-function HoverWrapper({
+export const HoverWrapper = ({
   children,
   variant = 'scale',
   borderRadius = 0,
   disableHoverEffect = false,
   hovered = false,
   ...rest
-}: HoverWrapperProps) {
+}: HoverWrapperProps) => {
   return (
     <Container
       hovered={hovered}
@@ -21,6 +21,4 @@ function HoverWrapper({
       {children}
     </Container>
   );
-}
-
-export { HoverWrapper };
+};

@@ -1,4 +1,4 @@
-import { Box, Menu } from '@mui/material';
+import { Menu } from '@mui/material';
 import styled from 'styled-components';
 
 export const LanguageButton = styled.div`
